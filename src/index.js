@@ -7,15 +7,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 
+import PageTemplate from './containers/PageTemplate';
+
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <div>
-        <Route exact path="/" component={HomeComponent} />
-      </div>
-    </Router>
+    <PageTemplate />
   </Provider>,
   document.getElementById('root')
 );
