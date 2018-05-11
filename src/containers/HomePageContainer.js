@@ -18,9 +18,24 @@ const Button = styled.button`
 `;
 
 class HomePageContainer extends Component {
-  handleCategoryClick = () => {
-
+  handleCategoryClick = (event) => {
+    event.preventDefault();
+    this.props.fetchCategories();
+    this.props.history.push('/categories');
   }
+
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   this.props.createHabit(this.state);
+  //   this.setState({
+  //     name: '',
+  //     description: '',
+  //     number_of_days: '',
+  //     category_id: '',
+  //     stars: [{}, {}, {}, {}, {}, {}, {}]
+  //   });
+  //   this.props.history.push('/habits');
+  // }
 
   render() {
     return (
@@ -37,7 +52,7 @@ class HomePageContainer extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    categories: bindActionCreators(categories, dispatch)
+    fetchCategories: bindActionCreators(fetchCategories, dispatch)
   }
 }
 
