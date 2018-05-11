@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import PageTemplate from './PageTemplate';
 import LearnMoreContainer from './LearnMoreContainer';
+import { fetchCategories } from '../actions/categoryActions';
 
 const Button = styled.button`
   border-radius: 5px;
@@ -23,19 +24,6 @@ class HomePageContainer extends Component {
     this.props.fetchCategories();
     this.props.history.push('/categories');
   }
-
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   this.props.createHabit(this.state);
-  //   this.setState({
-  //     name: '',
-  //     description: '',
-  //     number_of_days: '',
-  //     category_id: '',
-  //     stars: [{}, {}, {}, {}, {}, {}, {}]
-  //   });
-  //   this.props.history.push('/habits');
-  // }
 
   render() {
     return (
