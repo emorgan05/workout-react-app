@@ -16,7 +16,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
-        <Route exact path="/" component={LearnMoreContainer} />
+        <Route exact path="/" component={HomePageContainer} />
+        <Route path="/learn-more" component={LearnMoreContainer} />
       </div>
     </Router>
   </Provider>,

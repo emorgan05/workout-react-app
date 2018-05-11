@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import PageTemplate from './PageTemplate';
+import LearnMoreContainer from './LearnMoreContainer';
 
 const Button = styled.button`
   border-radius: 5px;
@@ -12,16 +15,18 @@ const Button = styled.button`
   font-size: 2em;
 `;
 
-const HomePageContainer = () => {
-  return (
-    <PageTemplate>
-      <div>
-        <Button>Learn More</Button>
-        <Button>Choose a Category</Button>
-        <Button>Start</Button>
-      </div>
-    </PageTemplate>
-  )
+class HomePageContainer extends Component {
+  render() {
+    return (
+      <PageTemplate>
+        <div>
+          <Link to="/learn-more" exact="true"><Button>Learn More</Button></Link>
+          <Button>Choose a Category</Button>
+          <Button>Start</Button>
+        </div>
+      </PageTemplate>
+    )
+  }
 };
 
 export default HomePageContainer;
