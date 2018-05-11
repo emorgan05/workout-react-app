@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import PageTemplate from './PageTemplate';
 import LearnMoreContainer from './LearnMoreContainer';
@@ -16,17 +18,27 @@ const Button = styled.button`
 `;
 
 class HomePageContainer extends Component {
+  handleCategoryClick = () => {
+
+  }
+
   render() {
     return (
       <PageTemplate>
         <div>
           <Link to="/learn-more" exact="true"><Button>Learn More</Button></Link>
-          <Button>Choose a Category</Button>
+          <Button onClick={this.handleCategoryClick} >Choose a Category</Button>
           <Button>Start</Button>
         </div>
       </PageTemplate>
     )
   }
-};
+}
 
-export default HomePageContainer;
+function mapDispatchToProps(dispatch) {
+  return {
+    categories: bindActionCreators(categories, dispatch)
+  }
+}
+
+export default connect(null, mapDispatchToProps)(HomePageContainer);
