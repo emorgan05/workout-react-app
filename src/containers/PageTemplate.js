@@ -3,12 +3,10 @@ import PageContainer from './PageContainer';
 import PageContent from './PageContent';
 import HomePageContainer from './HomePageContainer';
 
-const PageTemplate = () => {
+const PageTemplate = (props) => {
   return (
     <PageContainer>
-      <PageContent>
-        <HomePageContainer />
-      </PageContent>
+      <PageContent displayBlock={'block'}>{props.children}</PageContent>
     </PageContainer>
   )
 }
