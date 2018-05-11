@@ -1,3 +1,5 @@
+import CategoriesApi from '../api/categoriesApi';
+
 export function fetchCategories() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CATEGORIES' });
