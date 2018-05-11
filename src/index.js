@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 
 import HomePageContainer from './containers/HomePageContainer';
+import LearnMoreContainer from './containers/LearnMoreContainer';
 
 const store = configureStore();
 
@@ -15,7 +16,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
-        <Route exact path="/" component={HomePageContainer} />
+        <Route exact path="/" component={LearnMoreContainer} />
       </div>
     </Router>
   </Provider>,
