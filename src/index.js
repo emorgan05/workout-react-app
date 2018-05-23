@@ -9,6 +9,7 @@ import configureStore from './store/configureStore';
 
 import HomePageContainer from './containers/HomePageContainer';
 import LearnMoreContainer from './containers/LearnMoreContainer';
+import CategoriesContainer from './containers/CategoriesContainer';
 
 const store = configureStore();
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <div>
         <Route exact path="/" component={HomePageContainer} />
         <Route path="/learn-more" component={LearnMoreContainer} />
+        <Route path="/categories" component={CategoriesContainer} />
       </div>
     </Router>
   </Provider>,

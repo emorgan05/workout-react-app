@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import PageTemplate from './PageTemplate';
 import LearnMoreContainer from './LearnMoreContainer';
+import CategoriesContainer from './CategoriesContainer';
 import { fetchCategories } from '../actions/categoryActions';
 
 const Button = styled.button`
