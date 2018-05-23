@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import CategoryListItem from './CategoryListItem';
 
 class CategoriesList extends Component {
-  render() {
+  componentDidMount() {
     const CategoriesListItem = this.props.categories.map((category, index) => {
       return (
         <CategoryListItem
@@ -10,7 +11,9 @@ class CategoriesList extends Component {
         />
       )
     });
+  }
 
+  render() {
     return(
       <CategoriesListItem />
     )

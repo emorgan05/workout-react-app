@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import PageTemplate from './PageTemplate';
 import CategoriesList from './CategoriesList';
 
 const CategoriesContainer = ({categories}) => {
   return (
     <PageTemplate>
-      <CategoriesList categories={this.props.categories} />
+      <CategoriesList categories={categories} />
     </PageTemplate>
   )
 }
