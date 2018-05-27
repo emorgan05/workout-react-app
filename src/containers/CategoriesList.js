@@ -3,7 +3,7 @@ import CategoryListItem from './CategoryListItem';
 
 class CategoriesList extends Component {
   componentDidMount() {
-    const CategoriesListItem = this.props.categories.map((category, index) => {
+    const CategoriesList = this.props.categories.map((category, index) => {
       return (
         <CategoryListItem
           key={index}
@@ -15,7 +15,7 @@ class CategoriesList extends Component {
 
   render() {
     return(
-      <CategoriesListItem />
+      <CategoriesList />
     )
   }
 }
